@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 오늘 저녁 메뉴 추천해줘!</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message"> 맛잘알 쩝쩝박사 NFC가 말하길... </p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "역시 한국인은 밥심이지! 김치찌개에 소세지반찬은 어때요?",
+                "스트레스 받은 오늘, 안되겠다. 오늘 저녁은 치킨 어때요?",
+                "매운게 땡기세요? 떡볶이에 핫도그 추가 합시다!",
+                "오늘은 깔끔한게 땡기네. 회나 초밥은 어때요?",
+                "고기를 먹어야 힘이 나지! 삼겹살에 냉면 갑시다."
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
